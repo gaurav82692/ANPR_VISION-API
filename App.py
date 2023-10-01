@@ -104,5 +104,9 @@ def send_image(filename):
 def back():
     return redirect("http://codebugged.com/", code=302)
 
+@app.route('/go again')
+def send_image(filename):
+    return send_from_directory("images", filename)
+
 if __name__ == "__main__":
     app.run(debug=True)
